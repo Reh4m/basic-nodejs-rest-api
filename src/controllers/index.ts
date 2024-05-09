@@ -70,7 +70,7 @@ export const updateUser = async (
 
   try {
     await pool.query(
-      `UPDATE user SET name = ${name}, email = ${email} WHERE id = ${userId}`
+      `UPDATE users SET name = '${name}', email = '${email}' WHERE id = ${userId}`
     );
 
     return res.json({
