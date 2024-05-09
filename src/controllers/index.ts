@@ -44,7 +44,7 @@ export const createUser = async (
 
   try {
     await pool.query(
-      `INSERT INTO users(name, email) VALUES(${name}, ${email})`
+      `INSERT INTO users(name, email) VALUES('${name}', '${email}')`
     );
 
     return res.json({
